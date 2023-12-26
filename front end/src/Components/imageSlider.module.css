@@ -1,0 +1,9 @@
+.body_for{
+    background-color: #334389;
+    color: #fff;
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 200px;
+}

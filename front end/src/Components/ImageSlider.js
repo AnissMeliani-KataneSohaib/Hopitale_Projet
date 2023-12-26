@@ -1,113 +1,58 @@
-import { useState } from "react";
+import Carousel from 'react-bootstrap/Carousel';
+import aniss from './imageSlider.module.css'
 
-
-
-const slideStyles = {
-    position: "absolute",
-    top: 0,
-    left: 0,
-    width: "100%",
-    height: "100%",
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-
-
-  };
-
+function DarkVariant() {
+  const styleimageslide={
+    height: '88vh'
+  }
+ 
   
-const rightArrowStyles = {
-  position: "absolute",
-  top: "50%",
-  transform: "translate(0, -50%)",
-  right: "32px",
-  fontSize: "45px",
-  color: "#fff",
-  zIndex: 1,
-  cursor: "pointer",
-};
+  return (
+    <>
+    <Carousel data-bs-theme="white">
+      <Carousel.Item>
+        <img
+          className="d-block w-100 " style={styleimageslide}
+          src='./images/image1.jpg'
+          alt="First slide"
 
-const leftArrowStyles = {
-  position: "absolute",
-  top: "50%",
-  transform: "translate(0, -50%)",
-  left: "32px",
-  fontSize: "45px",
-  color: "#fff",
-  zIndex: 1,
-  cursor: "pointer",
-};
+        />
+   
+      </Carousel.Item>
+      <Carousel.Item>
+        <img
+          className="d-block w-100"style={styleimageslide}
+          src='./images/image2.jpg'
+          alt="Second slide"
+        />
+      </Carousel.Item>
+      <Carousel.Item>
+        <img
+          className="d-block w-100" style={styleimageslide}
+          src='./images/image3.jpg'
+          alt="Third slide"
+        />
+  
+      </Carousel.Item>
+      <Carousel.Item>
+        <img
+          className="d-block w-100" style={styleimageslide}
+          src='./images/image4.jpg'
+          alt="Third slide"
+        />
+      </Carousel.Item>
+      
+    </Carousel>
+  <div className={aniss.body_for}>
+    <div >
+       <p style={{fontSize:'2rem'}}>L'hôpital MELKAT incarne un pilier essentiel dans le domaine de la santé, offrant des soins de premier plan et des services de qualité. En tant que référence incontournable dans le secteur de la santé privée, MELKAT se distingue par sa capacité à répondre aux besoins médicaux les plus exigeants. Fort de son engagement envers l'excellence, l'hôpital MELKAT représente un établissement moderne et dévoué, contribuant de manière
+        significative au bien-être de ses patients et à l'innovation dans le domaine de la santé</p>
+    </div>
 
-const sliderStyles = {
-  position: "relative",
-  height: "100%",
-};
+  </div>
 
-const dotsContainerStyles = {
-  display: "flex",
-  justifyContent: "center",
-};
+    </>
+  );
+}
 
-const dotStyle = {
-  margin: "0 3px",
-  cursor: "pointer",
-  fontSize: "20px",
-};
-
-
-
-const ImageSlider = ({ slides }) => {
-        const [currentIndex, setCurrentIndex] = useState(0);
-        
-const slideStylesWidthBackground = {
-    ...slideStyles,
-    backgroundImage: `url(${slides[currentIndex].url})`,
-  };
-        const goToPrevious = () => {
-           const isFirstSlide = currentIndex === 0;
-           const newIndex = isFirstSlide ? slides.length - 1 : currentIndex - 1;
-           setCurrentIndex(newIndex);
-        };
-        const goToNext = () => {
-           const isLastSlide = currentIndex === slides.length - 1;
-           const newIndex = isLastSlide ? 0 : currentIndex + 1;
-           setCurrentIndex(newIndex);
-        };
-        const goToSlide = (slideIndex) => {
-           setTimeout(() => {
-             setCurrentIndex(slideIndex);
-           },500);
-        };
-    
-       
-        return (
-           <div style={sliderStyles}>
-             <div>
-               <div onClick={goToPrevious} style={leftArrowStyles}>
-                 ❰
-               </div>
-               <div onClick={goToNext} style={rightArrowStyles}>
-                 ❱
-               </div>
-             </div>
-             <div style={slideStylesWidthBackground}>
-             <div style={dotsContainerStyles}>
-               {slides.map((slide, slideIndex) => (
-                 <div
-                   style={{
-                     ...dotStyle,
-                     color: currentIndex === slideIndex ? "white" : "black",
-                   }}
-                   key={slideIndex}
-                   onClick={() => goToSlide(slideIndex)}
-                 >
-                   ●
-                 </div>
-               ))}
-             </div>
-             </div>
-          
-           </div>
-        );
-       };
-
-export default ImageSlider;
+export default DarkVariant;

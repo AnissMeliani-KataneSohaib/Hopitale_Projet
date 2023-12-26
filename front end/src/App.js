@@ -7,11 +7,11 @@ import {Contact} from './Components/Contact'
 import {Recrutement} from "./Components/Recrutement"
 import {Infos} from "./Components/infos"
 import { Login } from './Components/login';
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 
 function App() {
   return(
-    <div>
       <Router>
         <Navbar/>
         <Routes>
@@ -22,7 +22,6 @@ function App() {
           <Route path='/login' element={<Login/>}/>
         </Routes>
       </Router>
-    </div>
   )
 }
 
