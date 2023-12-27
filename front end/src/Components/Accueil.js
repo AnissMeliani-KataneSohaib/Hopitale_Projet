@@ -1,16 +1,16 @@
 import { useEffect } from "react";
 import  DarkVariant from "./ImageSlider";
-import About from "./about";
+
 import './about.css'
 const Acceuil = () => {
   useEffect(()=>{
-    document.title='App hospital | Home'
+    document.title='App hospital / Accueil'
   },[])
   return (
     <div>
   
       < DarkVariant />
-      {/* <About /> */}
+      
     </div>
   );
 };
