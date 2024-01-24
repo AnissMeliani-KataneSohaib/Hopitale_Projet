@@ -5,10 +5,20 @@
     border: none;
     box-sizing: border-box;
 }
+/* Existing styles for .nav and other classes */
+
+.fixedNavbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Adjust z-index if needed */
+    /* Additional styles (background, padding, etc.) can be added as per your design */
+  }
+  
 
 .nav{
     background-color: rgb(241, 241, 241);
-    height: 25px;
+    
 }
 .nav_bg{
     background-color: rgb(230, 240, 240) ;
@@ -19,6 +29,7 @@
 .img_logo{
     width: 90px;
     display: flex;
+    justify-items: center;
     margin: 242px
 }
 a{
@@ -31,7 +42,6 @@ body{
 nav{
    
     margin: auto;
-    padding: 2rem 1rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -41,6 +51,7 @@ nav{
     max-width: 100px;;
 }
 .nav_links{
+   
     list-style: none;
     display: flex;
     align-items: center;
@@ -50,10 +61,11 @@ nav{
 .link a{
     position: relative;
     padding-bottom: 0.75rem;
-    color: #121111;
+    color: #334389;
     font-weight: bold;
     text-decoration: none;
-    font-size: 22px
+    font-size: 22px;
+ 
 }
 .link a::after{
     content: "";
@@ -68,3 +80,25 @@ nav{
 .link a:hover::after{
     width: 100%;
 }
+
+
+.nav {
+    background-color: rgb(241, 241, 241);
+    height: 60px; 
+    transition: all 0.5s ease;
+    box-shadow: none;
+}
+  .scrolled {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: rgb(230, 240, 240);
+    transition: all 0.5s ease; /* Transition effect when scrolled */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Example shadow effect */
+  }
+  
+  
+  
+
+  
