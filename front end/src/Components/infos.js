@@ -4,8 +4,7 @@ export const Infos=()=>{
     document.title='App hospital-Infos'
   },[])
     return(
-        <>
-          <h1>Infos</h1>
+        <>1
         </>
     )
 }

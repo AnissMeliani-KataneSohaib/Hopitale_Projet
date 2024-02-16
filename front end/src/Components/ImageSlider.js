@@ -3,9 +3,12 @@ import style from './imageSlider.module.css';
 import CountUp from 'react-countup'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUserDoctor,faUserNurse,faBed } from '@fortawesome/free-solid-svg-icons'
+import ScrollTrigger, { ScrollTriggerProps } from 'react-scroll-trigger';
+import { useState } from 'react';
 
 
 function DarkVariant() {
+  const[countup,Setcountup]=useState(false)
   const styleimageslide={
     height: '95vh'
   }
@@ -13,9 +16,7 @@ function DarkVariant() {
     height: '30vh', 
     width: 'auto'
   }
-  // const styleimageslide3={ 
-  //   height: '50vh', 
-  // }
+
   return (
     <>
     <Carousel data-bs-theme="white">
@@ -58,29 +59,26 @@ function DarkVariant() {
         significative au bien-être de ses patients et à l'innovation dans le domaine de la santé</p>
     
   </div>
+  <ScrollTrigger onEnter={()=>Setcountup(true)} onExit={()=>Setcountup(false)}>
    <div className={style.container}>
-      <div className={style.body_for2}>
-      <FontAwesomeIcon icon={faBed} style={{height: '70PX' , color: '#334389'}} />
-        <h1>
-          <CountUp start={0} end={100} duration={2} delay={0.5} />
-        </h1>
-        <p>Lits</p>
+     <div className={style.body_for2}>
+      <FontAwesomeIcon icon={faBed} style={{height: '70PX' , color: '#334389'}} />  
+         {countup && <h1><CountUp start={0} end={100} duration={2} delay={0.5} /></h1>}
+         <p>Lits</p>
       </div>
       <div className={style.body_for2}>
       <FontAwesomeIcon icon={faUserDoctor} style={{height: '70PX' , color: '#334389'}} />
-        <h1>
-          <CountUp start={0} end={47} duration={2} delay={0.5} />
-        </h1>
+        {countup && <h1><CountUp start={0} end={100} duration={2} delay={0.5} /></h1>}
         <p>Médecins</p>
       </div>
       <div className={style.body_for2} >
       <FontAwesomeIcon icon={faUserNurse} style={{height: '70PX' , color: '#334389'}} />
-        <h1>
-          <CountUp start={0} end={68} duration={2} delay={0.5} />
-        </h1>
+        {countup && <h1><CountUp start={0} end={100} duration={2} delay={0.5} /></h1>}
         <p>Infirmières</p>
       </div> 
     </div>
+    </ScrollTrigger>
+  
     <div style={{ display: 'flex', justifyContent: 'space-evenly', height: '80vh', alignItems: 'center' }}>
         <div style={{ textAlign: 'center' }}>
           <img src="./images/img1.png" style={styleimageslide2} alt="Image 1" />
@@ -115,18 +113,11 @@ function DarkVariant() {
         <div>
             <div>
               <img src='./images/pic1.jpg'/>
-              <img src='./images/pic2.jpg'/>
-              <img src='./images/pic3.jpg'/>
-              <img src='./images/pic5.jpg'/>
-              <img src='./images/pic6.jpg'/>
-              <img src='./images/pic7.jpg'/>
-              <img src='./images/pic8.jpg'/>
-              <img src='./images/pic9.jpg'/>
-              <img src='./images/pic10.jpg'/>
-              <img src='./images/pic11.jpg'/>
+              <img src='./images/pic2.jpg'/> 
             </div>
         </div>
       </main> 
+       
     </>
   );
 }

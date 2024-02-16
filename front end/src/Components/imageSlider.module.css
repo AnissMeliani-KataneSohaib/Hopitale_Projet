@@ -77,17 +77,27 @@ img{
   grid-auto-rows: 200px;
   grid-auto-flow: dense;
 }
-main div div img{
-  width: 364px;
-  height: 364px;
-  margin: 0.5rem;
-  border-radius: 4px;
-}
-main div div{
+main div div {
   display: flex;
- 
   flex-wrap: wrap;
+  justify-content: space-between;
+
 }
+
+main div div img {
+  max-width: 40%; /* Adjust the max-width to make the images smaller */
+  margin: 0.5rem;
+  border-radius: 5px;
+}
+
+main div div img:nth-child(2) {
+
+  top: 33rem;
+  left: 44%;
+}
+
+
+
 
 
 
