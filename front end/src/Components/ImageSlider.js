@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUserDoctor,faUserNurse,faBed } from '@fortawesome/free-solid-svg-icons'
 import ScrollTrigger, { ScrollTriggerProps } from 'react-scroll-trigger';
 import { useState } from 'react';
+import Footer from './Footer';
 
 
 function DarkVariant() {
@@ -68,12 +69,12 @@ function DarkVariant() {
       </div>
       <div className={style.body_for2}>
       <FontAwesomeIcon icon={faUserDoctor} style={{height: '70PX' , color: '#334389'}} />
-        {countup && <h1><CountUp start={0} end={100} duration={2} delay={0.5} /></h1>}
+        {countup && <h1><CountUp start={0} end={47} duration={2} delay={0.5} /></h1>}
         <p>Médecins</p>
       </div>
       <div className={style.body_for2} >
       <FontAwesomeIcon icon={faUserNurse} style={{height: '70PX' , color: '#334389'}} />
-        {countup && <h1><CountUp start={0} end={100} duration={2} delay={0.5} /></h1>}
+        {countup && <h1><CountUp start={0} end={68} duration={2} delay={0.5} /></h1>}
         <p>Infirmières</p>
       </div> 
     </div>
@@ -112,11 +113,13 @@ function DarkVariant() {
       <main>
         <div>
             <div>
-              <img src='./images/pic1.jpg'/>
-              <img src='./images/pic2.jpg'/> 
+              <img src='./images/pic1.jpg' loading='lazy'/>
+              <img src='./images/pic2.jpg' loading='lazy'/> 
+              <img src='./images/pic3.jpg' loading='lazy'/> 
             </div>
         </div>
       </main> 
+      <Footer/>
        
     </>
   );
