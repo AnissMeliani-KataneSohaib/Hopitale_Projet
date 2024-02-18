@@ -12,7 +12,7 @@
     display: flex;
     width: 100%; 
     justify-content: space-between; 
-    align-items: center; /* Center items vertically */
+    align-items: center; 
     height: 40vh;
     background-color: #f5f5f5 !important;
   }
@@ -29,8 +29,8 @@
   }
   
   .body_for2 p {
-    margin: 2px 0; /* Adjust margin for the label */
-    font-weight: bold; /* Optional: Add bold font to the label */
+    margin: 2px 0; 
+    font-weight: bold; 
     font-size: 2rem;
     color:#3667c5;
   }
@@ -90,7 +90,7 @@ main div div img {
 }
 
 main div div img:nth-child(2) {
-  margin: 0.5rem; /* Remove the margin to remove the gap */
+  margin: 0.5rem; 
   top: 33rem;
   left: 44%;
 }
