@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Footer from "./Footer";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
+import { useEffect } from "react"
 export const Contact = () => {
   const [na, setNa] = useState("");
   const [da, setDa] = useState("");
@@ -9,6 +10,11 @@ export const Contact = () => {
   const [tel, setTel] = useState("");
 
   const [com, setCom] = useState("");
+
+  useEffect(()=>{
+    document.title='App hospital-Contact'
+  },[])
+
 
   const handleChangee = (e) => {
     const value = e.target.value;
@@ -75,9 +81,22 @@ export const Contact = () => {
     textAlign: "center",
     marginBottom: "20px",
   };
+  
+  const styleforvideo={
+    width:' 100%',
+    height: '100%',
+    position: 'fixed',
+    zIndex: '-1',
+    objectFit: 'cover',
+    filter: 'blur(8px)'
+};
 
   return (
     <>
+     <video className='videoTag' autoPlay loop muted style={styleforvideo}>
+        <source src='./fvid/video.mp4' type='video/mp4' />
+      </video>
+
       <div style={containerStyle}>
         <div style={formStyle}>
           <h2 style={headerStyle}>Contact Us</h2>

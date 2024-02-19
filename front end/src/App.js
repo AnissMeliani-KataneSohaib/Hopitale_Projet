@@ -4,7 +4,7 @@ import { BrowserRouter as Router,Routes,Route } from 'react-router-dom';
 import { Navbar } from './Components/navbar';
 import { Acceuil } from './Components/Accueil';
 import {Contact} from './Components/Contact'
-import {Recrutement} from "./Components/Recrutement"
+import Recrutement from "./Components/Recrutement"
 import {Infos} from "./Components/infos"
 import { Login } from './Components/login';
 import 'bootstrap/dist/css/bootstrap.min.css'

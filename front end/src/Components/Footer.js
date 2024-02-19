@@ -63,8 +63,8 @@ function Footer() {
 
             <ul className="nav col-md-4 justify-content-end list-unstyled d-flex">
                 <li className="ms-3"><a className="text-light" style={{fontSize: '2rem'}} href="#"><FontAwesomeIcon icon={faFacebook} /></a></li>
-                <li className="ms-3"><a className="text-light" style={{fontSize: '2rem'}} href="#"><FontAwesomeIcon icon={faInstagram} /></a></li>
-                <li className="ms-3"><a className="text-light" style={{fontSize: '2rem'}} href="https://youtu.be/P0uaLRO6V1U?si=Bpk2wJwkmoL-ee9R"><FontAwesomeIcon icon={faYoutube} /></a></li>
+                <li className="ms-3"><a className="text-light" style={{fontSize: '2rem'}} href="https://www.instagram.com/melkat_hos?igsh=ZmJyN2Q1bGNwcWZt&utm_source=qr"><FontAwesomeIcon icon={faInstagram} /></a></li>
+                <li className="ms-3"><a className="text-light" style={{fontSize: '2rem'}} href="https://youtube.com/@MELKAT-iy9xe?si=0UrSVBxKAWPKK9Ca"><FontAwesomeIcon icon={faYoutube} /></a></li>
             </ul>
         </div>
     </div>
