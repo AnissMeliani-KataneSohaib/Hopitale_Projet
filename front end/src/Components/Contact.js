@@ -138,7 +138,7 @@ export const Contact = () => {
           <div className="mb-3" style={inputStyle}>
             <label className="form-label">Phone Number</label>
             <PhoneInput
-              country={"us"}
+              country={"ma"}
               value={tel}
               onChange={Tel}
               inputClass="form-control" 

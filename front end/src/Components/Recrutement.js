@@ -9,7 +9,7 @@ export default function Recrutement() {
   const [pdfFile, setPDFFile] = useState(null);
   const [viewPdf, setViewPdf] = useState(null);
   const [na, setNa] = useState("");
-  const [da, setda] = useState("");
+  const [da, setDa] = useState("");
   const [email, setemail] = useState("");
   const [tel, settel] = useState("");
   const [com, setcom] = useState("");
@@ -54,7 +54,7 @@ export default function Recrutement() {
   };
   const prda = (e) => {
     const v = e.target.value;
-    setda(v);
+    setDa(v);
   };
 
   const mail = (e) => {
