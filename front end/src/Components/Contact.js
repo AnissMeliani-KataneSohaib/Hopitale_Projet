@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Footer from "./Footer";
-import PhoneInput from "react-phone-input-2";
-import "react-phone-input-2/lib/style.css";
+// import PhoneInput from "react-phone-input-2";
+// import "react-phone-input-2/lib/style.css";
 import { useEffect } from "react"
 export const Contact = () => {
   const [na, setNa] = useState("");
@@ -135,13 +135,24 @@ export const Contact = () => {
               onChange={mail}
             />
           </div>
-          <div className="mb-3" style={inputStyle}>
+          {/* <div className="mb-3" style={inputStyle}>
             <label className="form-label">Phone Number</label>
             <PhoneInput
               country={"ma"}
-              value={tel}
               onChange={Tel}
               inputClass="form-control" 
+            />
+          </div> */}
+           <div className="mb-3" style={inputStyle}>
+            <label htmlFor="lastName" className="form-label">
+              Phone Number
+            </label>
+            <input
+              type="text"
+              className="form-control"
+              id=" PhoneNumber"
+              placeholder="+212 "
+              onChange={Tel}
             />
           </div>
 
