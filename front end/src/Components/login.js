@@ -7,7 +7,7 @@ export const Login=()=>{
   },[])
   return(
     <>
-    <div style={{display:'flex',justifyContent:"center",alignItems:'center',paddingTop:'250px'}}>
+    <div style={{display:'flex',justifyContent:"center",alignItems:'center',padding:'350px'}}>
     <div className={style.card}>
       <div className={style.profileImage}>
         <center>

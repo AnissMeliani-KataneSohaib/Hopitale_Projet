@@ -65,7 +65,7 @@ const Infos = () => {
             }}
           >
             <li style={{ marginBottom: "20px", fontSize: "26px" }}>
-              Cardiologie{" "}
+              Cardiologie
             </li>
             <li style={{ marginBottom: "20px", fontSize: "26px" }}>
               Orthopédie
@@ -139,7 +139,7 @@ const Infos = () => {
           bien-être.
         </p> 
        </div>
-        <h2>Emplacement et Contact</h2>
+        {/* <h2>Emplacement et Contact</h2>
         <p>
           <strong>Adresse :</strong> 
           <br />
@@ -149,7 +149,7 @@ const Infos = () => {
           <br />
           <strong>Horaires :</strong> 
           <br />
-        </p>
+        </p> */}
       </div>
       <Footer />
     </>
