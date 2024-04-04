@@ -1,6 +1,7 @@
 import { useEffect } from "react"
 import style from "./login.module.css"
 import Footer from "./Footer"
+import { Link } from "react-router-dom"
 export const Login=()=>{
   useEffect(()=>{
     document.title='App hospital-Login'
@@ -19,9 +20,9 @@ export const Login=()=>{
         </center>
       </div>
       <div className={style.textContainer}>
-        <div className={style.name}>MODERATEUR</div>
-        
+       <div className={style.name}>MODERATEUR</div>
       </div>
+     <Link to={'/moderateur/login'}> <div className="btn btn-primary" style={{width:'40%',padding:'6px',margin:'0px 65px'}}>login</div></Link>
     </div>
   
     <div className={style.card}>
@@ -36,7 +37,7 @@ export const Login=()=>{
       </div>
       <div className={style.textContainer}>
         <div className={style.name}>DOCTEUR</div>
-        
+        <div className="btn btn-primary" style={{width:'50%',padding:'6px',margin:'18px 55px'}}>login</div>
       </div>
     </div>
   
@@ -52,10 +53,11 @@ export const Login=()=>{
       </div>
       <div className={style.textContainer}>
         <div className={style.name}>RÉCEPTIONNISTE</div>
-        
+        <div className="btn btn-primary" style={{width:'50%',padding:'6px',margin:'18px 55px'}}>login</div>
       </div>
     </div>
     </div>
+    
     <Footer/>
     </>
   )
