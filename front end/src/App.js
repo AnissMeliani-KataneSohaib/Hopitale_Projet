@@ -7,19 +7,26 @@ import {Contact} from './Components/Contact'
 import Recrutement from "./Components/Recrutement"
 import {Infos} from "./Components/infos"
 import { Login } from './Components/login';
+import { AdminDashboard } from './Components/AdminDashboard';
+import { Shownavbar } from './Components/Shownavbar';
 import 'bootstrap/dist/css/bootstrap.min.css'
+
 
 
 function App() {
   return(
+    
       <Router>
-        <Navbar/>
+        <Shownavbar>
+         <Navbar/>
+        </Shownavbar>
         <Routes>
           <Route path='/' element={<Acceuil/>}/>
           <Route path='/contact' element={<Contact/>}/>
           <Route path='/Recrutement' element={<Recrutement/>}/>
           <Route path='/infos' element={<Infos/>}/>
           <Route path='/login' element={<Login/>}/>
+          <Route path='/moderateur/login' element={<AdminDashboard/>}/>
         </Routes>
       </Router>
   )
