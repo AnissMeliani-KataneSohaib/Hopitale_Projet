@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Navigate, useNavigate } from 'react-router-dom';
+import {  useNavigate } from 'react-router-dom';
 import axios from '../axios';
 import { useAuth } from '../contexts/AuthContext';
 
@@ -8,7 +8,8 @@ export const LoginForm = () => {
     const [error, setError] = useState(null);
     const [navigateToProfile, setNavigateToProfile] = useState(false); // State for navigation
 
-    const navigate = useNavigate()
+    const navigate = useNavigate();
+
     // login user
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -21,25 +22,32 @@ export const LoginForm = () => {
         try {
             const resp = await axios.post('/login', body);
             if (resp.status === 200) {
-                if(resp.data.user.role === "médecin"){
-                    setUser(resp.data.user);
-                    setNavigateToProfile(true);
-                    navigate('/profile')
-                }else if(resp.data.user.role === "admin"){
-                    setUser(resp.data.user);
-                    setNavigateToProfile(true);
-                    navigate('/admin')
+                const user = resp.data.user;
+                setUser(user);
+
+                // Store token in localStorage
+                localStorage.setItem('login_token', user.token);
+
+                // Redirect to appropriate route based on user role
+                switch (user.role) {
+                    case 'médecin':
+                        navigate('/médecin');
+                        break;
+                    case 'moderateur':
+                        navigate('/moderateur');
+                        break;
+                    case 'récepiosinniste':
+                        navigate('/récepiosinniste');
+                        break;
+                    default:
+                        // Handle other roles or scenarios
+                        break;
                 }
             }
         } catch (error) {
             setError(error.response.data.message || 'An error occurred.');
         }
     };
-
-    // Render the Navigate component if navigateToProfile is true
-    if (navigateToProfile) {
-        return <Navigate to="/profile" />;
-    }
 
     return (
         <section className="bg-gray-50">
